@@ -22,7 +22,7 @@
     }
     img {
       max-width: 100%;
-      height: auto;
+      height: 100%;
     }
     button {
       font-size: 1.2rem;
@@ -96,10 +96,10 @@
     // Event listener for Yes button click
     document.getElementById("yesButton").addEventListener("click", () => {
       yesPressed = true;
-      document.getElementById("yesButton").textContent = "Ok yay!!!";
+      // document.getElementById("yesButton").textContent = "Ok yay!!!";
       document.getElementById("yesButton").disabled = true;
       document.getElementById("noButton").disabled = true;
-      document.querySelector("h1").textContent = "Thank you for accepting!";
+      document.querySelector("h1").textContent = "Yayyyyy!!!!!!";
       document.querySelector("img").src = "https://media.giphy.com/media/3ohuPoaY8sg0kyfwZi/giphy.gif";
       
       // Create "Read my love letter" button

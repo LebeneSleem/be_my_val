@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crush Website</title>
+  <style>
+    /* Tailwind CSS classes used in the React code */
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .h-screen { height: 100vh; }
+    .-mt-16 { margin-top: -4rem; }
+    .text-4xl { font-size: 2.25rem; }
+    .my-4 { margin-top: 1rem; margin-bottom: 1rem; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .rounded { border-radius: 0.25rem; }
+    .mr-4 { margin-right: 1rem; }
+    .bg-green-500 { background-color: #34D399; }
+    .hover\:bg-green-700:hover { background-color: #047857; }
+    .text-white { color: #fff; }
+    .font-bold { font-weight: 700; }
+    .bg-red-500 { background-color: #EF4444; }
+    .hover\:bg-red-700:hover { background-color: #991B1B; }
+  </style>
+</head>
+<body>
+  <div class="flex flex-col items-center justify-center h-screen -mt-16">
+    <img class="h-[200px]" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" alt="Cute bear holding roses">
+    <h1 class="text-4xl my-4">Will you be my Valentine?</h1>
+    <div>
+      <button id="yesButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4" style="font-size: 16px;">
+        Yes
+      </button>
+      <button id="noButton" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        No
+      </button>
+    </div>
+  </div>
+
+  <!-- Script to handle button clicks -->
+  <script>
+    let noCount = 0;
+    let yesPressed = false;
+
+    // Function to update text of No button dynamically
+    const getNoButtonText = () => {
+      const phrases = [
+        "No",
+        "Are you sure?",
+        "Really sure?",
+        "Think again!",
+        "Last chance!",
+        "Surely not?",
+        "You might regret this!",
+        "Give it another thought!",
+        "Are you absolutely certain?",
+        "This could be a mistake!",
+        "Have a heart!",
+        "Don't be so cold!",
+        "Change of heart?",
+        "Wouldn't you reconsider?",
+        "Is that your final answer?",
+        "You're breaking my heart ;("
+      ];
+
+      return phrases[Math.min(noCount, phrases.length - 1)];
+    };
+
+    // Function to handle No button click
+    const handleNoClick = () => {
+      noCount++;
+      document.getElementById("noButton").textContent = getNoButtonText();
+    };
+
+    // Event listener for Yes button click
+    document.getElementById("yesButton").addEventListener("click", () => {
+      yesPressed = true;
+      document.getElementById("yesButton").textContent = "Ok yay!!!";
+      document.getElementById("yesButton").disabled = true;
+      document.getElementById("noButton").disabled = true;
+      document.querySelector("h1").textContent = "";
+      document.querySelector("img").src = "https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif";
+    });
+
+    // Event listener for No button click
+    document.getElementById("noButton").addEventListener("click", handleNoClick);
+  </script>
+</body>
+</html>

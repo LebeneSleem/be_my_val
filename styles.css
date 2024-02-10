@@ -21,9 +21,9 @@ h1 {
   color: #333;
 }
 img#mainImage {
-  max-width: 200%; /* Adjust to make the main image wider */
+  max-width: 300%; /* Adjust to make the main image wider */
   height: auto; /* Maintain aspect ratio */
-  max-height: 500px; /* Adjust the maximum height */
+  max-height: 400px; /* Adjust the maximum height */
   margin: 30px 0; /* Add margin for spacing */
   position: relative; /* Ensure relative positioning */
 }

@@ -75,7 +75,7 @@ const createHeartImages = () => {
   const leftHeart = document.createElement("img");
   leftHeart.src = "images/hearts.gif"; // Path to your heart-shaped image
   leftHeart.className = "heart";
-  const leftHeartX = mainImageX - 50;
+  const leftHeartX = mainImageX - 100;
   const leftHeartY = mainImageY + mainImageHeight / 2;
   leftHeart.style.left = `${leftHeartX}px`;
   leftHeart.style.top = `${leftHeartY}px`;

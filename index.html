@@ -9,6 +9,12 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
+      position: relative; /* Set position relative for absolute positioning */
+    }
+    .heart {
+      position: absolute; /* Set position absolute for precise placement */
+      width: 20px; /* Adjust size as needed */
+      height: auto;
     }
     .container {
       max-width: 800px;
@@ -70,7 +76,6 @@
     </div>
   </div>
 
-  
   <!-- Script to handle button clicks -->
   <script>
     let noCount = 0;
@@ -113,8 +118,6 @@
       document.getElementById("noButton").disabled = true;
       document.querySelector("h1").textContent = "Yaaaaayyyyy!!!! I Love You!";
       document.querySelector("img").src = "images/love.gif";
-
-      // Change the second GIF
       document.querySelector(".heart-gif").src = "images/in-love-nervous.gif";
       
       // Remove the Yes and No buttons
@@ -135,6 +138,27 @@
 
     // Event listener for No button click
     document.getElementById("noButton").addEventListener("click", handleNoClick);
+
+    // Function to create heart images
+    const createHeartImages = () => {
+      const container = document.querySelector(".container");
+      const containerWidth = container.offsetWidth;
+      const containerHeight = container.offsetHeight;
+
+      for (let i = 0; i < 20; i++) {
+        const heart = document.createElement("img");
+        heart.src = "images/heart.png"; // Path to your heart-shaped image
+        heart.className = "heart";
+        const randomX = Math.floor(Math.random() * containerWidth);
+        const randomY = Math.floor(Math.random() * containerHeight);
+        heart.style.left = `${randomX}px`;
+        heart.style.top = `${randomY}px`;
+        container.appendChild(heart);
+      }
+    };
+
+    // Call the function to create heart images
+    createHeartImages();
   </script>
 </body>
 </html>

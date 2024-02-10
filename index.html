@@ -115,7 +115,9 @@
       document.querySelector("h1").textContent = "Yaaaaayyyyy!!!! I Love You!";
       document.querySelector("img").src = "images/love.gif";
       
-    
+      // Remove the Yes and No buttons
+      document.getElementById("yesButton").remove();
+      document.getElementById("noButton").remove();
 
       // Create "Listen to my heart" button
       const heartButton = document.createElement("button");
@@ -125,8 +127,8 @@
         window.open("https://open.spotify.com/playlist/your-playlist-id");
       });
 
-      // Append buttons to container
-      document.querySelector(".container").appendChild(heartButton);
+      // Append button to container
+      document.querySelector("#buttonContainer").appendChild(heartButton);
     });
 
     // Event listener for No button click

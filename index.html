@@ -158,8 +158,8 @@
         const leftHeart = document.createElement("img");
         leftHeart.src = "images/heart.jpg"; // Path to your heart-shaped image
         leftHeart.className = "heart";
-        const leftHeartX = mainImageX - 30;
-        const leftHeartY = mainImageY + mainImageHeight / 2 - 100 + (i * 20); // Adjust spacing
+        const leftHeartX = Math.random() * (mainImageX - 30); // Random X position to the left
+        const leftHeartY = mainImageY + mainImageHeight / 2 - 100 + (Math.random() * 200); // Random Y position
         leftHeart.style.left = `${leftHeartX}px`;
         leftHeart.style.top = `${leftHeartY}px`;
         container.appendChild(leftHeart);
@@ -170,8 +170,8 @@
         const rightHeart = document.createElement("img");
         rightHeart.src = "images/heart.jpg"; // Path to your heart-shaped image
         rightHeart.className = "heart";
-        const rightHeartX = mainImageX + mainImageWidth + 10;
-        const rightHeartY = mainImageY + mainImageHeight / 2 - 100 + (i * 20); // Adjust spacing
+        const rightHeartX = mainImageX + mainImageWidth + 10 + (Math.random() * (containerWidth - mainImageWidth - 10)); // Random X position to the right
+        const rightHeartY = mainImageY + mainImageHeight / 2 - 100 + (Math.random() * 200); // Random Y position
         rightHeart.style.left = `${rightHeartX}px`;
         rightHeart.style.top = `${rightHeartY}px`;
         container.appendChild(rightHeart);

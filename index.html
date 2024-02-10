@@ -59,11 +59,11 @@
 </head>
 <body>
   <div class="container">
-    <img src="images/Us.jpeg" alt="Us">
+    <img id="mainImage" src="images/Us.jpeg" alt="Us">
     
     <h1>Hey Baby Boy, Will You Be My Valentine?</h1>
     <img class="heart-gif" src="images/canddy.gif" alt="Heart GIF">
-    <div>
+    <div id="buttonContainer">
       <button id="yesButton" class="yes-button">Yes</button>
       <button id="noButton" class="no-button">No</button>
     </div>
@@ -107,14 +107,12 @@
     // Function to handle Yes button click
     const handleYesClick = () => {
       yesPressed = true;
-      document.getElementById("yesButton").textContent = "Ok yay!!!";
-      document.getElementById("yesButton").disabled = true;
-      document.getElementById("noButton").disabled = true;
-      document.querySelector("h1").textContent = "Thank you for accepting!";
-      
-      // Remove the second set of buttons
-      const buttonContainer = document.querySelector(".container").querySelector("div");
-      buttonContainer.removeChild(buttonContainer.lastChild);
+      document.getElementById("yesButton").textContent = "Listen to my heart";
+      document.getElementById("yesButton").removeAttribute("id");
+      document.getElementById("noButton").remove();
+
+      document.getElementById("mainImage").src = "images/love.gif";
+      document.querySelector("h1").textContent = "Yaaayyyyy!!!!";
     };
 
     // Event listener for Yes button click

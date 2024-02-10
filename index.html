@@ -109,20 +109,13 @@
     // Event listener for Yes button click
     document.getElementById("yesButton").addEventListener("click", () => {
       yesPressed = true;
-      document.getElementById("yesButton").textContent = "Ok yay!!!";
+      // document.getElementById("yesButton").textContent = "Ok yay!!!";
       document.getElementById("yesButton").disabled = true;
       document.getElementById("noButton").disabled = true;
-      document.querySelector("h1").textContent = "Thank you for accepting!";
-      document.querySelector("img").src = "https://media.giphy.com/media/3ohuPoaY8sg0kyfwZi/giphy.gif";
+      document.querySelector("h1").textContent = "Yaaaaayyyyy!!!! I Love You!";
+      document.querySelector("img").src = "images/love.gif";
       
-      // Create "Read my love letter" button
-      const loveLetterButton = document.createElement("button");
-      loveLetterButton.textContent = "Read my love letter";
-      loveLetterButton.className = "yes-button";
-      loveLetterButton.style.marginRight = "10px";
-      loveLetterButton.addEventListener("click", () => {
-        window.open("https://docs.google.com/document/d/your-love-letter-document-id/edit");
-      });
+    
 
       // Create "Listen to my heart" button
       const heartButton = document.createElement("button");
@@ -133,7 +126,6 @@
       });
 
       // Append buttons to container
-      document.querySelector(".container").appendChild(loveLetterButton);
       document.querySelector(".container").appendChild(heartButton);
     });
 

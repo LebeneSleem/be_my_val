@@ -70,6 +70,7 @@
     </div>
   </div>
 
+  
   <!-- Script to handle button clicks -->
   <script>
     let noCount = 0;
@@ -105,16 +106,24 @@
       document.getElementById("noButton").textContent = getNoButtonText();
     };
 
-    // Function to handle Yes button click
-    const handleYesClick = () => {
+    // Event listener for Yes button click
+    document.getElementById("yesButton").addEventListener("click", () => {
       yesPressed = true;
-      document.getElementById("yesButton").textContent = "Listen to my heart";
-      document.getElementById("yesButton").removeAttribute("id");
-      document.getElementById("noButton").remove();
-
-      document.getElementById("mainImage").src = "images/love.gif";
-      document.querySelector("h1").textContent = "Yaaaayyyyy!!! I Love You!";
+      document.getElementById("yesButton").textContent = "Ok yay!!!";
+      document.getElementById("yesButton").disabled = true;
+      document.getElementById("noButton").disabled = true;
+      document.querySelector("h1").textContent = "Thank you for accepting!";
+      document.querySelector("img").src = "https://media.giphy.com/media/3ohuPoaY8sg0kyfwZi/giphy.gif";
       
+      // Create "Read my love letter" button
+      const loveLetterButton = document.createElement("button");
+      loveLetterButton.textContent = "Read my love letter";
+      loveLetterButton.className = "yes-button";
+      loveLetterButton.style.marginRight = "10px";
+      loveLetterButton.addEventListener("click", () => {
+        window.open("https://docs.google.com/document/d/your-love-letter-document-id/edit");
+      });
+
       // Create "Listen to my heart" button
       const heartButton = document.createElement("button");
       heartButton.textContent = "Listen to my heart";
@@ -124,11 +133,9 @@
       });
 
       // Append buttons to container
+      document.querySelector(".container").appendChild(loveLetterButton);
       document.querySelector(".container").appendChild(heartButton);
     });
-
-    // Event listener for Yes button click
-    document.getElementById("yesButton").addEventListener("click", handleYesClick);
 
     // Event listener for No button click
     document.getElementById("noButton").addEventListener("click", handleNoClick);

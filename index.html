@@ -145,8 +145,10 @@
       const container = document.querySelector(".container");
       const containerWidth = container.offsetWidth;
       const containerHeight = container.offsetHeight;
+      const availableSpace = containerWidth * containerHeight;
+      const numHearts = Math.floor(availableSpace / 10000); // Adjust size of each heart image as needed
 
-      for (let i = 0; i < 40; i++) {
+      for (let i = 0; i < numHearts; i++) {
         const heart = document.createElement("img");
         heart.src = "images/heart.jpg"; // Path to your heart-shaped image
         heart.className = "heart";

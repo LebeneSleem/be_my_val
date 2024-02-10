@@ -32,6 +32,7 @@
       height: auto;
       max-height: 300px; /* Adjust height as needed */
       margin: 20px 0; /* Add margin for spacing */
+      position: relative; /* Ensure relative positioning */
     }
     .heart-gif {
       width: 100px; /* Adjust size as needed */
@@ -130,7 +131,7 @@
       heartButton.textContent = "Listen to my heart";
       heartButton.className = "yes-button";
       heartButton.addEventListener("click", () => {
-        window.open("https://open.spotify.com/playlist/your-playlist-id");
+        window.open("https://open.spotify.com/playlist/1XQlV6o7NcX27Q8WLmGxT1");
       });
 
       // Append button to container
@@ -145,19 +146,32 @@
       const container = document.querySelector(".container");
       const containerWidth = container.offsetWidth;
       const containerHeight = container.offsetHeight;
-      const availableSpace = containerWidth * containerHeight;
-      const numHearts = Math.floor(availableSpace / 10000); // Adjust size of each heart image as needed
 
-      for (let i = 0; i < numHearts; i++) {
-        const heart = document.createElement("img");
-        heart.src = "images/heart.jpg"; // Path to your heart-shaped image
-        heart.className = "heart";
-        const randomX = Math.floor(Math.random() * containerWidth);
-        const randomY = Math.floor(Math.random() * containerHeight);
-        heart.style.left = `${randomX}px`;
-        heart.style.top = `${randomY}px`;
-        container.appendChild(heart);
-      }
+      const mainImage = document.getElementById("mainImage");
+      const mainImageWidth = mainImage.offsetWidth;
+      const mainImageHeight = mainImage.offsetHeight;
+      const mainImageX = mainImage.offsetLeft;
+      const mainImageY = mainImage.offsetTop;
+
+      // Left heart
+      const leftHeart = document.createElement("img");
+      leftHeart.src = "images/heart.jpg"; // Path to your heart-shaped image
+      leftHeart.className = "heart";
+      const leftHeartX = mainImageX - 30;
+      const leftHeartY = mainImageY + mainImageHeight / 2;
+      leftHeart.style.left = `${leftHeartX}px`;
+      leftHeart.style.top = `${leftHeartY}px`;
+      container.appendChild(leftHeart);
+
+      // Right heart
+      const rightHeart = document.createElement("img");
+      rightHeart.src = "images/heart.jpg"; // Path to your heart-shaped image
+      rightHeart.className = "heart";
+      const rightHeartX = mainImageX + mainImageWidth + 10;
+      const rightHeartY = mainImageY + mainImageHeight / 2;
+      rightHeart.style.left = `${rightHeartX}px`;
+      rightHeart.style.top = `${rightHeartY}px`;
+      container.appendChild(rightHeart);
     };
 
     // Call the function to create heart images

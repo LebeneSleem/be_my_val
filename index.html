@@ -153,6 +153,12 @@
       const mainImageX = mainImage.offsetLeft;
       const mainImageY = mainImage.offsetTop;
 
+
+      for (let i = 0; i < 10; i++) { // Change 10 to the desired quantity
+    const heart = document.createElement("img");
+    heart.src = "images/heart.jpg"; // Path to your heart-shaped image
+    heart.className = "heart";
+
       // Left heart
       const leftHeart = document.createElement("img");
       leftHeart.src = "images/heart.jpg"; // Path to your heart-shaped image

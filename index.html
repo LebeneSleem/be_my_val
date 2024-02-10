@@ -109,12 +109,13 @@
     // Event listener for Yes button click
     document.getElementById("yesButton").addEventListener("click", () => {
       yesPressed = true;
-      // document.getElementById("yesButton").textContent = "Ok yay!!!";
       document.getElementById("yesButton").disabled = true;
       document.getElementById("noButton").disabled = true;
       document.querySelector("h1").textContent = "Yaaaaayyyyy!!!! I Love You!";
       document.querySelector("img").src = "images/love.gif";
-      document.querySelector("img.heart-gif").src = "images/in-love-nervous.gif";
+
+      // Change the second GIF
+      document.querySelector(".heart-gif").src = "images/in-love-nervous.gif";
       
       // Remove the Yes and No buttons
       document.getElementById("yesButton").remove();

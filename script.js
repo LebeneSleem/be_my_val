@@ -44,6 +44,15 @@ document.getElementById("yesButton").addEventListener("click", () => {
   document.getElementById("yesButton").remove();
   document.getElementById("noButton").remove();
 
+  // Create "Read my love letter" button
+      const loveLetterButton = document.createElement("button");
+      loveLetterButton.textContent = "Read my love letter";
+      loveLetterButton.className = "yes-button";
+      loveLetterButton.style.marginRight = "10px";
+      loveLetterButton.addEventListener("click", () => {
+        window.open("https://docs.google.com/document/d/your-love-letter-document-id/edit");
+      });
+
   // Create "Listen to my heart" button
   const heartButton = document.createElement("button");
   heartButton.textContent = "Listen to my heart";
@@ -53,6 +62,7 @@ document.getElementById("yesButton").addEventListener("click", () => {
   });
 
   // Append button to container
+  document.querySelector(".container").appendChild(loveLetterButton);
   document.querySelector("#buttonContainer").appendChild(heartButton);
 });
 

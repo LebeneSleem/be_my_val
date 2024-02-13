@@ -50,7 +50,7 @@ document.getElementById("yesButton").addEventListener("click", () => {
       loveLetterButton.className = "yes-button";
       loveLetterButton.style.marginRight = "10px";
       loveLetterButton.addEventListener("click", () => {
-        window.open("https://docs.google.com/document/d/your-love-letter-document-id/edit");
+        window.open("https://docs.google.com/document/d/1jB_ZvwCGHxQbdCG50bwoDKkmPhn0ct9ehzhqplQf9Dw/edit?usp=sharing");
       });
 
   // Create "Listen to my heart" button

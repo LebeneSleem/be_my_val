@@ -46,7 +46,7 @@ document.getElementById("yesButton").addEventListener("click", () => {
 
   // Create "Read my love letter" button
       const loveLetterButton = document.createElement("button");
-      loveLetterButton.textContent = "Read my love letter";
+      loveLetterButton.textContent = "My love letter";
       loveLetterButton.className = "yes-button";
       loveLetterButton.style.marginRight = "10px";
       loveLetterButton.addEventListener("click", () => {

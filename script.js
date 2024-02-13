@@ -62,7 +62,7 @@ document.getElementById("yesButton").addEventListener("click", () => {
   });
 
   // Append button to container
-  document.querySelector(".container").appendChild(loveLetterButton);
+  document.querySelector("#buttonContainer").appendChild(loveLetterButton);
   document.querySelector("#buttonContainer").appendChild(heartButton);
 });
 

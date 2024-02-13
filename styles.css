@@ -1,59 +1,59 @@
 /* Customized CSS styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  position: relative; /* Set position relative for absolute positioning */
-}
-.heart {
-  position: absolute; /* Set position absolute for precise placement */
-  width: 120px; /* Adjust size as needed */
-  height: auto;
-}
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-  position: relative; /* Ensure container acts as a reference for absolute positioning */
-}
-h1 {
-  font-size: 2.5rem;
-  color: #333;
-}
-img#mainImage {
-  max-width: 300%; /* Adjust to make the main image wider */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 400px; /* Adjust the maximum height */
-  margin: 30px 0; /* Add margin for spacing */
-  position: relative; /* Ensure relative positioning */
-}
-.heart-gif {
-  width: 150px; /* Adjust size as needed */
-  height: auto;
-  max-height: 150px;
-  margin: 0 30px; /* Adjust margin for spacing */
-}
-button {
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.yes-button {
-  background-color: #34D399;
-  color: #fff;
-  width: 160px; /* Set initial width for Yes button */
-}
-.yes-button:hover {
-  background-color: #047857;
-}
-.no-button {
-  background-color: #EF4444;
-  color: #fff;
-  width: 80px; /* Set initial width for No button */
-}
-.no-button:hover {
-  background-color: #991B1B;
-}
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    position: relative; /* Set position relative for absolute positioning */
+  }
+  .heart {
+    position: absolute; /* Set position absolute for precise placement */
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Ensure container acts as a reference for absolute positioning */
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  img#mainImage {
+    max-width: 300%; /* Adjust to make the main image wider */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Adjust the maximum height */
+    margin: 30px 0; /* Add margin for spacing */
+    position: relative; /* Ensure relative positioning */
+  }
+  .heart-gif {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    max-height: 150px;
+    margin: 0 30px; /* Adjust margin for spacing */
+  }
+  button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .yes-button {
+    background-color: #34D399;
+    color: #fff;
+    width: 160px; /* Set initial width for Yes button */
+  }
+  .yes-button:hover {
+    background-color: #047857;
+  }
+  .no-button {
+    background-color: #EF4444;
+    color: #fff;
+    width: 80px; /* Set initial width for No button */
+  }
+  .no-button:hover {
+    background-color: #991B1B;
+  }

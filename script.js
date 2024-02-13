@@ -37,33 +37,40 @@ document.getElementById("yesButton").addEventListener("click", () => {
   document.getElementById("yesButton").disabled = true;
   document.getElementById("noButton").disabled = true;
   document.querySelector("h1").textContent = "Yaaaaayyyyy!!!! I Love You!";
-  document.querySelector("img").src = "images/love.gif";
-  document.querySelector(".heart-gif").src = "images/in-love-nervous.gif";
   
-  // Remove the Yes and No buttons
-  document.getElementById("yesButton").remove();
-  document.getElementById("noButton").remove();
+  // Preload the new GIF
+  const nervousGif = new Image();
+  nervousGif.src = "images/in-love-nervous.gif";
+  nervousGif.onload = () => {
+    // Once the new GIF is loaded, change the source attribute
+    document.querySelector(".heart-gif").src = "images/in-love-nervous.gif";
+    document.querySelector("img").src = "images/love.gif";
 
-  // Create "Read my love letter" button
-      const loveLetterButton = document.createElement("button");
-      loveLetterButton.textContent = "My love letter";
-      loveLetterButton.className = "yes-button";
-      loveLetterButton.style.marginRight = "10px";
-      loveLetterButton.addEventListener("click", () => {
-        window.open("https://drive.google.com/file/d/1QBJRSvG2XIcX-_r3Feu0b0HS2oSdH1ZA/view?usp=sharing");
-      });
+    // Remove the Yes and No buttons
+    document.getElementById("yesButton").remove();
+    document.getElementById("noButton").remove();
 
-  // Create "Listen to my heart" button
-  const heartButton = document.createElement("button");
-  heartButton.textContent = "Listen to my heart";
-  heartButton.className = "yes-button";
-  heartButton.addEventListener("click", () => {
-    window.open("https://open.spotify.com/playlist/1XQlV6o7NcX27Q8WLmGxT1");
-  });
+    // Create "Read my love letter" button
+    const loveLetterButton = document.createElement("button");
+    loveLetterButton.textContent = "My love letter";
+    loveLetterButton.className = "yes-button";
+    loveLetterButton.style.marginRight = "10px";
+    loveLetterButton.addEventListener("click", () => {
+      window.open("https://drive.google.com/file/d/1QBJRSvG2XIcX-_r3Feu0b0HS2oSdH1ZA/view?usp=sharing");
+    });
 
-  // Append button to container
-  document.querySelector("#buttonContainer").appendChild(loveLetterButton);
-  document.querySelector("#buttonContainer").appendChild(heartButton);
+    // Create "Listen to my heart" button
+    const heartButton = document.createElement("button");
+    heartButton.textContent = "Listen to my heart";
+    heartButton.className = "yes-button";
+    heartButton.addEventListener("click", () => {
+      window.open("https://open.spotify.com/playlist/1XQlV6o7NcX27Q8WLmGxT1");
+    });
+
+    // Append button to container
+    document.querySelector("#buttonContainer").appendChild(loveLetterButton);
+    document.querySelector("#buttonContainer").appendChild(heartButton);
+  };
 });
 
 // Event listener for No button click

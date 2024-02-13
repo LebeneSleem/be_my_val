@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   text-align: center;
   padding: 20px;
-  color:  #F4C2C2;
+  background-color:  #F4C2C2;
   position: relative; /* Ensure container acts as a reference for absolute positioning */
 }
 h1 {

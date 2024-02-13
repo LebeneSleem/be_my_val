@@ -14,7 +14,6 @@ body {
   margin: 0 auto;
   text-align: center;
   padding: 20px;
-  background-color: #FFB6C1;
   position: relative; /* Ensure container acts as a reference for absolute positioning */
 }
 h1 {
@@ -24,7 +23,7 @@ h1 {
 img#mainImage {
   max-width: 300%; /* Adjust to make the main image wider */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 10px
+  /*border-radius: 10px */
   max-height: 400px; /* Adjust the maximum height */
   margin: 30px 0; /* Add margin for spacing */
   position: relative; /* Ensure relative positioning */

@@ -43,10 +43,10 @@ document.getElementById("yesButton").addEventListener("click", () => {
   document.querySelector("h1").textContent = "Yaaaaayyyyy!!!! I Love You!";
   document.querySelector("img").src = "images/love.gif";
   
-  // Set a timeout to change the nervous GIF after a slight delay
+  // Set a timeout to change the nervous GIF if a slight delay
   setTimeout(() => {
     document.querySelector(".heart-gif").src = "images/in-love-nervous.gif";
-  }, 100); // Adjust the delay time as needed
+  }, 100); 
 
   // Remove the Yes and No buttons
   document.getElementById("yesButton").remove();
@@ -92,7 +92,7 @@ const createHeartImages = () => {
 
   // Left heart
   const leftHeart = document.createElement("img");
-  leftHeart.src = "images/hearts.gif"; // Path to your heart-shaped image
+  leftHeart.src = "images/hearts.gif"; 
   leftHeart.className = "heart";
   const leftHeartX = mainImageX - 100;
   const leftHeartY = mainImageY + mainImageHeight / 2;
@@ -102,7 +102,7 @@ const createHeartImages = () => {
 
   // Right heart
   const rightHeart = document.createElement("img");
-  rightHeart.src = "images/hearts.gif"; // Path to your heart-shaped image
+  rightHeart.src = "images/hearts.gif"; 
   rightHeart.className = "heart";
   const rightHeartX = mainImageX + mainImageWidth + 20;
   const rightHeartY = mainImageY + mainImageHeight / 2;
